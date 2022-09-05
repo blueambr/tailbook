@@ -17,8 +17,9 @@
     "> 0.5%"
   ],
   "scripts": {
-    "dev": "start-storybook -p 3000 --no-open",
-    "build:sb": "build-storybook"
+    "dev": "npm run sprite && start-storybook -p 3000 --no-open",
+    "build:sb": "npm run sprite && build-storybook",
+    "sprite": "svgstore -o ./src/assets/images/sprite.svg ./src/assets/icons/**/*.svg && svgo ./src/assets/images/sprite.svg -o ./src/assets/images/sprite.svg"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
@@ -44,6 +45,8 @@
     "pug": "^3.0.2",
     "pug-runtime": "^3.0.1",
     "storypug": "^1.0.0-rc.8",
+    "svgo": "^2.8.0",
+    "svgstore-cli": "^2.0.1",
     "tailwindcss": "^3.1.8"
   }
 }
