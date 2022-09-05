@@ -1,0 +1,14 @@
+{
+  "overrides": [
+    {
+      "files": "**/*.pug",
+      "options": {
+        "parser": "pug",
+        "commentPreserveSpaces": "trim-all",
+        "emptyAttributes": "none",
+        "pugClassNotation": "as-is",
+        "wrapAttributesThreshold": 1
+      }
+    }
+  ]
+}

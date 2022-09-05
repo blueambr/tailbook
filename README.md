@@ -1,1 +1,3 @@
-# tailbook
+# Tailbook
+
+Storybook + Tailwind CSS

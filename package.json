@@ -1,0 +1,44 @@
+{
+  "name": "@hotepp/tb",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotepp/tailbook.git"
+  },
+  "author": "Vlad Gerasimovich <hotepp@pm.me>",
+  "license": "The Unlicense",
+  "bugs": {
+    "url": "https://github.com/hotepp/tailbook/issues"
+  },
+  "homepage": "https://github.com/hotepp/tailbook#readme",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.5%"
+  ],
+  "scripts": {
+    "dev": "start-storybook -p 3000 --no-open",
+    "build:sb": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@prettier/plugin-pug": "^2.2.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/html": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "autoprefixer": "^10.4.8",
+    "babel-loader": "^8.2.5",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "pug": "^3.0.2",
+    "pug-runtime": "^3.0.1",
+    "storypug": "^1.0.0-rc.8",
+    "tailwindcss": "^3.1.8"
+  }
+}

@@ -1,0 +1,69 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Build
+build
+dist
+out
+storybook-static
+
+# Package managers
+jspm_packages
+node_modules
+.npm*
+.pnp*
+.yarn*
+!.npmrc
+
+# IDE, OS, Text editor
+._*
+.DS_Store
+.cache
+.idea
+.project
+.settings
+.tmproj
+.vscode
+Thumbs.db
+*.sublime*
+
+# Server
+.env*
+.htaccess
+.next
+.nuxt
+.vercel
+
+# Misc
+.CVS
+.eslintcache
+.git
+.grunt
+.hg
+.lock-wscript
+.node_repl_history
+.nyc_output
+.serverless
+.svn
+coverage
+lib-cov
+logs
+pids
+private.*
+sw.*
+*.bak
+*.diff
+*.err
+*.exe
+*.log
+*.orig
+*.pem
+*.pid
+*.pid.lock
+*.rej
+*.sass-cache
+*.seed
+*.swo
+*.swp
+*.tgz
+*.vi
+*~
