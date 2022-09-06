@@ -18,17 +18,20 @@
   ],
   "scripts": {
     "dev": "npm run sprite && start-storybook -p 3000 --no-open",
-    "build": "rm -rf ./dist && npm run sprite && npm run tailwind -- -i ./src/main.css -o ./dist/main.css --minify",
+    "build": "rm -rf ./dist && npm run sprite && npm run build:css && npm run build:js",
+    "build:css": "npm run tailwind -- -i ./src/main.css -o ./dist/main.css --minify",
+    "build:js": "npm run esbuild ./src/main.js -- --bundle --minify --outfile=./dist/main.js",
     "build:sb": "npm run sprite && build-storybook",
     "sprite": "svgstore -o ./src/assets/images/sprite.svg ./src/assets/icons/**/*.svg && svgo ./src/assets/images/sprite.svg -o ./src/assets/images/sprite.svg",
-    "eslint": "eslint",
-    "lint-staged": "lint-staged",
-    "pretty-quick": "pretty-quick",
-    "tailwind": "tailwind",
     "lint": "npm run lint:js && npm run lint:pug",
     "lint:js": "npm run pretty-quick --pattern ./src/**/*.{js,ts} && npm run eslint ./src/**/*.{js,ts} --fix",
     "lint:pug": "npm run pretty-quick --pattern ./src/components/**/*.pug",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "esbuild": "esbuild",
+    "eslint": "eslint",
+    "lint-staged": "lint-staged",
+    "pretty-quick": "pretty-quick",
+    "tailwind": "tailwind"
   },
   "lint-staged": {
     "./src/**/*.{js,ts}": [
@@ -52,6 +55,7 @@
     "@storybook/testing-library": "^0.0.13",
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",
+    "esbuild": "^0.15.7",
     "eslint": "^8.23.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
