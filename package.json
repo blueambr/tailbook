@@ -22,7 +22,7 @@
     "build:css": "npm run tailwind -- -i ./src/main.css -o ./dist/main.css --minify",
     "build:js": "npm run esbuild ./src/main.js -- --bundle --minify --outfile=./dist/main.js",
     "build:sb": "npm run sprite && build-storybook",
-    "sprite": "svgstore -o ./src/assets/images/sprite.svg ./src/assets/icons/**/*.svg && svgo ./src/assets/images/sprite.svg -o ./src/assets/images/sprite.svg",
+    "sprite": "truncate -s 0 ./src/assets/images/sprite.svg && svgstore -o ./src/assets/images/sprite.svg ./src/assets/icons/**/*.svg && svgo ./src/assets/images/sprite.svg -o ./src/assets/images/sprite.svg",
     "lint": "npm run lint:js && npm run lint:pug",
     "lint:js": "npm run pretty-quick --pattern ./src/**/*.{js,ts} && npm run eslint ./src/**/*.{js,ts} --fix",
     "lint:pug": "npm run pretty-quick --pattern ./src/components/**/*.pug",
